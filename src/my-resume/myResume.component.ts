@@ -4,7 +4,7 @@ import { ClipboardService } from 'ngx-clipboard';
 import { NgwWowService } from 'ngx-wow';
 
 @Component({
-  selector: 'app-root',
+  selector: 'my-resume',
   templateUrl: './myResume.component.html',
   styleUrls: ['./myResume.component.scss'],
 })

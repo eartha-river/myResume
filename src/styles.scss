@@ -1,1 +1,303 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url("../src/assets/starrySky.jpg");
+  color: white !important;
+  display: flex;
+  font-family: monospace;
+  background-size: contain;
+
+  .js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
+
+  .dropdown-menu {
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      svg {
+        margin: 0.5vw;
+      }
+    }
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+  main {
+    position: relative;
+    padding: 5vw;
+
+    header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      //   transform: translate(0, -20%);
+      flex-wrap: wrap;
+
+      .myself,
+      .personal {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        .showMe {
+          border-radius: 50%;
+          width: 30vw;
+          position: relative;
+
+          &:hover {
+            color: #fff;
+            font-size: 0.8em;
+            background: #3871c7;
+            padding: 5px;
+            animation: circle 2s ease-out 0.5s both;
+          }
+        }
+      }
+
+      .arrow {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        text-transform: uppercase;
+        flex-wrap: wrap;
+
+        span {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          align-items: end;
+          font-size: 25px;
+        }
+
+        svg {
+          fill: #fff;
+          height: 10vh;
+          width: auto;
+          animation: shake 10000ms ease-in-out;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+
+    section {
+      width: 100%;
+      float: left;
+      overflow: hidden;
+      height: 110vh;
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 970px;
+        margin: 0 auto;
+        max-width: 90%;
+        transform: translateZ(1000px);
+
+        h2 {
+          position: relative;
+          text-align: center;
+          width: 100%;
+          padding: 1rem 2rem calc(1rem + 10px);
+          background-image: linear-gradient(to top, #ecf4f6, #a79ff0);
+          color: #000000;
+          font-weight: bold;
+
+          &::before {
+            position: absolute;
+            top: -7px;
+            left: -7px;
+            width: 100%;
+            height: 100%;
+            content: "";
+            border: 4px solid #000000;
+          }
+        }
+
+        .frame {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          overflow: hidden;
+          flex-wrap: wrap;
+          align-items: center;
+          text-align: center;
+          animation: fadeIn ease 1.5s;
+          animation-fill-mode: forwards;
+
+          &.portfolio {
+            justify-content: center;
+          }
+
+          .time {
+            font-size: 40px;
+          }
+
+          span {
+            width: 400px;
+            height: auto;
+            border: 1px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            padding: 20px;
+
+            &:hover {
+              color: #000;
+              background-color: #fff;
+            }
+          }
+
+          .rollerImg {
+            padding: 10px;
+
+            img {
+              opacity: 0.5;
+              width: 30vh;
+              border-radius: 50%;
+              animation: loading 10s infinite;
+
+              &.noRotate {
+                animation: none !important;
+              }
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          .myContact {
+            img {
+              width: 240px;
+              height: 240px;
+            }
+          }
+
+          .carousel-control-next-icon,
+          .carousel-control-prev-icon {
+            border: unset;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 786px) {
+      max-width: 700px;
+
+      section {
+        .container {
+          .frame {
+            justify-content: center;
+            span {
+              width: 450px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      max-width: 555px;
+    }
+  }
+
+  @media screen and (max-width: 786px) {
+    .mobileContact {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 786px) {
+    .desktopContact {
+      display: none;
+    }
+  }
+}
+
+//phone
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 183;
+  }
+  /* 圓環繞一圈 */
+  20% {
+    rotate: 45deg;
+    scale: 1;
+    opacity: 1;
+  }
+  40% {
+    rotate: -45deg;
+  }
+  60% {
+    rotate: 20deg;
+  }
+  80% {
+    rotate: -20deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+//arrow shake
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, -10px, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(0, +12px, 0);
+  }
+  30%,
+  70% {
+    transform: translate3d(0, -14px, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(0, +14px, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+//fadeIn
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//loading
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
