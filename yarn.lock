@@ -1410,7 +1410,7 @@
   "resolved" "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
   "version" "0.11.0"
 
-"@popperjs/core@^2.11.8":
+"@popperjs/core@^2.11.8", "@popperjs/core@^2.9.2":
   "integrity" "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   "version" "2.11.8"
@@ -1495,6 +1495,13 @@
   "version" "3.5.10"
   dependencies:
     "@types/node" "*"
+
+"@types/bootstrap@^5.2.6":
+  "integrity" "sha512-BlAc3YATdasbHoxMoBWODrSF6qwQO/E9X8wVxCCSa6rWjnaZfpkr2N6pUMCY6jj2+wf0muUtLySbvU9etX6YqA=="
+  "resolved" "https://registry.npmjs.org/@types/bootstrap/-/bootstrap-5.2.6.tgz"
+  "version" "5.2.6"
+  dependencies:
+    "@popperjs/core" "^2.9.2"
 
 "@types/connect-history-api-fallback@^1.3.5":
   "integrity" "sha512-4x5FkPpLipqwthjPsF7ZRbOv3uoLUFkTA9G9v583qi4pACvq0uTELrB8OLUzPWUI4IJIyvM85vzkV1nyiI2Lig=="

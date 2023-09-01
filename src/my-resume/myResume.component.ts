@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { ClipboardService } from 'ngx-clipboard';
 import { NgwWowService } from 'ngx-wow';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'my-resume',
@@ -52,13 +53,26 @@ export class myResumeComponent implements OnInit {
       });
     });
 
+    //
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: '#navbarActive',
+    });
+
+    //刷新Roller
+    var dataSpyList = [].slice.call(
+      document.querySelectorAll('[data-bs-spy="scroll"]')
+    );
+    dataSpyList.forEach(function (dataSpyEl) {
+      bootstrap.ScrollSpy.getInstance(dataSpyEl)?.refresh();
+    });
+
     this.wowService.init({
-      boxClass:'wow',
-      animateClass:'animated',
-      offset:0,
-      mobile:true,
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 0,
+      mobile: true,
       live: true,
-    })
+    });
   }
 
   //copy phonenmber

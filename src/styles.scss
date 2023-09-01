@@ -5,15 +5,6 @@ body {
   font-family: monospace;
   background-size: contain;
 
-  .js-scroll {
-    opacity: 0;
-    transition: opacity 500ms;
-  }
-
-  .js-scroll.scrolled {
-    opacity: 1;
-  }
-
   .dropdown-menu {
     .dropdown-item {
       display: flex;
@@ -29,6 +20,14 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
+
+    li {
+      display: contents;
+
+      .heart {
+        padding-bottom: 24px !important;
+      }
+    }
   }
 
   main {
@@ -86,7 +85,7 @@ body {
           fill: #fff;
           height: 10vh;
           width: auto;
-          animation: shake 10000ms ease-in-out;
+          animation: shakeArrow 10000ms ease-in-out;
           animation-iteration-count: infinite;
         }
       }
@@ -225,13 +224,13 @@ body {
 
   @media screen and (max-width: 786px) {
     .mobileContact {
-      display: none;
+      display: none !important;
     }
   }
 
   @media screen and (min-width: 786px) {
     .desktopContact {
-      display: none;
+      display: none !important;
     }
   }
 }
@@ -262,25 +261,25 @@ body {
 }
 
 //arrow shake
-@keyframes shake {
+@keyframes shakeArrow {
   10%,
   90% {
-    transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -2px, 0);
   }
   20%,
   80% {
-    transform: translate3d(0, +12px, 0);
+    transform: translate3d(0, +22px, 0);
   }
   30%,
   70% {
-    transform: translate3d(0, -14px, 0);
+    transform: translate3d(0, -6px, 0);
   }
   40%,
   60% {
-    transform: translate3d(0, +14px, 0);
+    transform: translate3d(0, +22px, 0);
   }
   50% {
-    transform: translate3d(0, -14px, 0);
+    transform: translate3d(0, -6px, 0);
   }
 }
 

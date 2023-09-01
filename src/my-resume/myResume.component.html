@@ -23,12 +23,13 @@
     <div
       class="d-flex flex-column flex-shrink-0 bg-light sidebar"
       style="width: 4.5rem"
+      id="navbarActive"
     >
       <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li>
           <a
             href="#backTop"
-            class="nav-link py-3 border-bottom"
+            class="nav-link py-3 border-bottom heart"
             aria-current="page"
             title="置頂"
             data-bs-toggle="tooltip"
@@ -52,7 +53,7 @@
         <li class="nav-item">
           <a
             href="#aboutMe"
-            class="nav-link active py-3 border-bottom"
+            class="nav-link py-3 border-bottom"
             aria-current="page"
             title="關於我"
             data-bs-toggle="tooltip"
@@ -259,7 +260,11 @@
         </ul>
       </div>
     </div>
-    <main>
+    <main
+      data-bs-spy="scroll"
+      data-bs-target="#navbarActive"
+      data-bs-offset="0"
+    >
       <header>
         <div
           class="myself backTop"
