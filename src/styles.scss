@@ -199,6 +199,7 @@ body {
       display: grid;
       section {
         margin: unset;
+        justify-self: center;
         .container {
           .frame {
             justify-content: center;
@@ -206,6 +207,7 @@ body {
             span {
               width: 100%;
               height: auto;
+              font-size: 16px;
             }
 
             .time {
