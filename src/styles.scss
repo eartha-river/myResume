@@ -103,7 +103,6 @@ body {
         flex-wrap: wrap;
         width: 970px;
         margin: 0 auto;
-        max-width: 90%;
         transform: translateZ(1000px);
 
         h2 {
@@ -199,12 +198,18 @@ body {
       max-width: 700px;
       display: grid;
       section {
+        margin: unset;
         .container {
           .frame {
             justify-content: center;
+
             span {
-              width: 450px;
+              width: 100%;
               height: auto;
+            }
+
+            .time {
+              font-size: 20px;
             }
           }
         }
